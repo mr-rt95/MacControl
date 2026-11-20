@@ -1,0 +1,4 @@
+"NSAppleEventsUsageDescription" = "MacControl использует это, чтобы читать и менять объекты входа и очищать Корзину через Finder.";
+"NSDownloadsFolderUsageDescription" = "MacControl ищет в «Загрузках» старые и большие файлы, которые вы, возможно, захотите убрать.";
+"NSDocumentsFolderUsageDescription" = "MacControl ищет здесь большие файлы и дубликаты. Ничего не удаляется без вашего выбора.";
+"NSDesktopFolderUsageDescription" = "MacControl ищет здесь большие файлы и дубликаты. Ничего не удаляется без вашего выбора.";

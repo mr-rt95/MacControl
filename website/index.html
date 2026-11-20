@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MacControl — центр управления старым Mac</title>
+<meta name="description" content="Мониторинг, диагностика, ускорение и очистка для Mac на процессоре Intel. Всё локально, без учётной записи.">
+<style>
+  :root { --bg:#fff; --fg:#1d1d1f; --muted:#6e6e73; --card:#f5f5f7; --accent:#0a6cf0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111; --fg:#f5f5f7; --muted:#a1a1a6; --card:#1c1c1e; --accent:#4c9bff; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.5 -apple-system, "Helvetica Neue", Arial, sans-serif; background:var(--bg); color:var(--fg); }
+  main { max-width: 880px; margin: 0 auto; padding: 0 20px 60px; }
+  header { padding: 64px 0 24px; text-align: center; }
+  h1 { font-size: 2.6rem; margin: 0 0 8px; }
+  .lead { color: var(--muted); font-size: 1.2rem; max-width: 640px; margin: 0 auto 28px; }
+  .button { display:inline-block; background:var(--accent); color:#fff; padding:12px 26px; border-radius:10px; text-decoration:none; font-weight:600; }
+  .small { color:var(--muted); font-size:.9rem; margin-top:10px; }
+  h2 { margin-top: 48px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; }
+  .card { background:var(--card); border-radius:14px; padding:18px; }
+  .card h3 { margin:0 0 6px; font-size:1.05rem; }
+  .card p { margin:0; color:var(--muted); font-size:.95rem; }
+  ul { padding-left: 1.2em; }
+  code { background:var(--card); padding:2px 6px; border-radius:6px; font-size:.9em; }
+  footer { color:var(--muted); font-size:.85rem; text-align:center; padding-top:40px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>MacControl</h1>
+    <p class="lead">Одно приложение для старого Mac: показывает, что его тормозит и греет, объясняет причину простым языком и предлагает безопасное действие.</p>
+    <a class="button" href="https://github.com/mr-rt95/MacControl/releases/latest">Скачать для macOS</a>
+    <p class="small">Версия 0.1.0 · macOS 12 Monterey и новее · Mac с процессором Intel</p>
+  </header>
+
+  <h2>Что умеет</h2>
+  <div class="grid">
+    <div class="card"><h3>Мониторинг</h3><p>Процессор по ядрам, память, диск, сеть, температуры и вентиляторы. Значок в строке меню: «52 °C · 18%».</p></div>
+    <div class="card"><h3>Диагностика</h3><p>«Mac перегрет и сбрасывает частоту. Причина — Chrome Helper». Каждый вывод показывает данные, на которых он основан.</p></div>
+    <div class="card"><h3>История и журнал</h3><p>Графики за час, сутки и неделю и список событий: что и когда тормозило вчера.</p></div>
+    <div class="card"><h3>Очистка</h3><p>Кэши, журналы, старые загрузки, остатки удалённых программ, дубликаты. Всё через Корзину, с предпросмотром и отменой.</p></div>
+    <div class="card"><h3>Ускорение</h3><p>Автозагрузка, фоновые службы, визуальные эффекты — с кнопкой «Вернуть как было».</p></div>
+    <div class="card"><h3>Здоровье</h3><p>Статус SSD, износ батареи, давление памяти, признаки проблем с охлаждением.</p></div>
+  </div>
+
+  <h2>Принципы</h2>
+  <ul>
+    <li><b>Безопасность.</b> Ничего не удаляется без подтверждения; всё обратимо через Корзину; системные папки защищены.</li>
+    <li><b>Честность.</b> Если датчика на вашей модели нет, приложение так и пишет и не показывает выдуманных цифр. Выводы — это эвристики, а не абсолютный диагноз.</li>
+    <li><b>Локальность.</b> Данные не покидают компьютер, учётная запись не нужна.</li>
+    <li><b>Лёгкость.</b> Нативное приложение на Swift: около 50 МБ памяти и почти нулевая нагрузка на процессор.</li>
+  </ul>
+
+  <h2>Установка</h2>
+  <p>Откройте DMG и перетащите MacControl в «Программы». При первом запуске macOS попросит подтвердить: правая кнопка на приложении ▸ «Открыть» (приложение подписано, но пока не нотаризовано Apple). Исходный код и подробности: <a href="https://github.com/mr-rt95/MacControl">github.com/mr-rt95/MacControl</a>.</p>
+  <p>Для некоторых функций macOS попросит разрешения: «Полный доступ к диску» (размер Корзины, резервные копии iPhone), «Автоматизация» (объекты входа, очистка Корзины через Finder), «Уведомления».</p>
+
+  <h2>Ограничения</h2>
+  <ul>
+    <li>Управление оборотами вентиляторов и частотой процессора не поддерживается: это рискованно для оборудования.</li>
+    <li>Без прав администратора видны только процессы текущего пользователя. Привилегированный помощник пока не реализован.</li>
+    <li>Названия датчиков различаются по моделям. Если у вас что-то не читается, запустите <code>MacControlProbe --stats --all-keys</code> и пришлите вывод.</li>
+  </ul>
+
+  <footer>MacControl — не связан с Apple Inc. Mac и macOS — товарные знаки Apple Inc.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,4 @@
+module CNVMe [system] {
+    header "CNVMe.h"
+    export *
+}

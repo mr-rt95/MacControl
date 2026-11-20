@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>ru</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>ru</string>
+        <string>en</string>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>MacControl</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.maccontrol.app</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>MacControl</string>
+    <key>CFBundleDisplayName</key>
+    <string>MacControl</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>12.0</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>MacControl uses this to read and change your login items and to empty the Trash through Finder.</string>
+    <key>NSDownloadsFolderUsageDescription</key>
+    <string>MacControl scans Downloads for old and large files you may want to remove.</string>
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>MacControl looks for large files and duplicates here. Nothing is removed unless you select it.</string>
+    <key>NSDesktopFolderUsageDescription</key>
+    <string>MacControl looks for large files and duplicates here. Nothing is removed unless you select it.</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+</dict>
+</plist>

@@ -1,0 +1,4 @@
+module CLibProc [system] {
+    header "CLibProc.h"
+    export *
+}

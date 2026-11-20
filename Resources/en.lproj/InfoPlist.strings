@@ -1,0 +1,4 @@
+"NSAppleEventsUsageDescription" = "MacControl uses this to read and change your login items and to empty the Trash through Finder.";
+"NSDownloadsFolderUsageDescription" = "MacControl scans Downloads for old and large files you may want to remove.";
+"NSDocumentsFolderUsageDescription" = "MacControl looks for large files and duplicates here. Nothing is removed unless you select it.";
+"NSDesktopFolderUsageDescription" = "MacControl looks for large files and duplicates here. Nothing is removed unless you select it.";

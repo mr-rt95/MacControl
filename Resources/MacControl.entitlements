@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Not sandboxed: reading SMC sensors and cleaning user folders is impossible inside the App Sandbox
+         (which is why the app is distributed outside the Mac App Store). -->
+
+    <!-- Needed under the hardened runtime so AppleScript can talk to System Events and Finder
+         (login items, emptying the Trash). The user is still asked for permission. -->
+    <key>com.apple.security.automation.apple-events</key>
+    <true/>
+</dict>
+</plist>

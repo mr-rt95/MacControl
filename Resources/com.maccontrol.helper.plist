@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Registered with SMAppService.daemon(plistName:). launchd starts the helper when the app connects. -->
+    <key>Label</key>
+    <string>com.maccontrol.helper</string>
+    <key>BundleProgram</key>
+    <string>Contents/MacOS/MacControlHelper</string>
+    <key>MachServices</key>
+    <dict>
+        <key>com.maccontrol.helper</key>
+        <true/>
+    </dict>
+    <key>AssociatedBundleIdentifiers</key>
+    <array>
+        <string>com.maccontrol.app</string>
+    </array>
+</dict>
+</plist>
